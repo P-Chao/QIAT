@@ -183,6 +183,7 @@ waf3*
 ## QIAT(Ours)
 #################
 
+.idea/workspace.xml
 draft/
 data/
 *.dat
