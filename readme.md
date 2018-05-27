@@ -2,17 +2,17 @@ QIAT
 ===
 Quantitative investment analysis tools
 
-###Introduction###
+### Introduction ###
 
 * Python 3.7
 * tushare package
 
-###Author###
+### Author ###
 
 [Peng Chao](!http://www.p-chao.com)
 
-###Version###
+### Version ###
 
-####2018/05/28(v_0.01)####
+#### 2018/05/28(v_0.01) ####
 
 1. 开始项目
