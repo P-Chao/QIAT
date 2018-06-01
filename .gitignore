@@ -187,3 +187,5 @@ waf3*
 draft/
 data/
 *.dat
+*.xls
+*.xlsx
