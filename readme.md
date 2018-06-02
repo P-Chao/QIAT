@@ -7,6 +7,11 @@ Quantitative investment analysis tools
 * Python 3.7
 * tushare package
 
+### Install ###
+* install tushare
+
+    `pip install tushare`
+
 ### Author ###
 
 [Peng Chao](!http://www.p-chao.com)
