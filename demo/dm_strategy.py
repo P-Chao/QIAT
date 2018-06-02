@@ -3,16 +3,17 @@
 from demo.dm_data import DataRepository
 import tushare as ts
 import pandas as pd
-import numpy as p
+import numpy as np
 import math
 
-class Strategy(object)
+class Strategy(object):
     def __init__(self, code_list, init_cash, start_time, end_time):
         self.start_time = start_time
         self.end_time = end_time
-        self.data_repository = DataRepository.get_instance(code_list, \
-                                                           self.start_time, \
-                                                           self.end_time)
+        self.data_repository = DataRepository(code_list , self.start_time, self.end_time)
+        #self.data_repository = DataRepository.get_instance(code_list, \
+        #                                                   self.start_time, \
+        #                                                   self.end_time)
         self.code_list = code_list
         self.benchmark_code = 'sh'
 
@@ -120,7 +121,7 @@ class Strategy(object)
         if len(df) == 3 and df.iloc[0]['ma5'] < df.iloc[0]['ma10'] and df.iloc[1]['ma5'] > df.iloc[1]['ma10']:
             buy_signal = 1
             buy_open_price = df.iloc[1]['open']
-        return buy_signal, buy_open_pric
+        return buy_signal, buy_open_price
 
     def get_sell_amount(self, code):
         return self.position_list[code]

@@ -1,4 +1,9 @@
 #coding=utf-8
+import demo.dm_strategy
+import demo.dm_data
+import pandas as pd
+import tushare as ts
+import math
 
 def annual_return(df):
     change = df['capital_market_value'].iloc[-1] / df['capital_market_value'].iloc[0] - 1
@@ -32,3 +37,9 @@ def max_dramdown(df):
     start_date = df[df['date'] <= end_date].sort_values(by='capital_market_value', ascending=False).iloc[0]['date']
 
     print('最大回撤为%f，开始时间为%s，结束时间为%s' % (maxdd, start_date, end_date))
+
+if __name__ == '__main__':
+    obj = demo.dm_strategy.Strategy(code_list=['002415', '002416', '000333'], init_cash=100000, \
+                                    start_time='2014-01-01', end_time='2018-06-01')
+    obj.run_simulation()
+

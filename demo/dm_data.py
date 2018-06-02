@@ -11,6 +11,7 @@ def singleton(cls):
         return cls._instance
     return wrapper
 
+
 @singleton
 #DataRepository = singleton(DataRepository)
 class DataRepository(object):
@@ -24,7 +25,11 @@ class DataRepository(object):
             df = df.dropna(how='any')
             self.all_data[code] = df
 
-    def get_onecode_df(selfself, code):
+    def get_onecode_df(self, code):
         return self.all_data[code]
+
+    def get_instance(self, code_list, starttime, endtime):
+        pass
+
 
 
