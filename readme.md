@@ -21,3 +21,4 @@ Quantitative investment analysis tools
 #### 2018/05/28(v_0.01) ####
 
 1. 开始项目
+2. 添加双均线策略

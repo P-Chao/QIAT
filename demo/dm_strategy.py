@@ -59,7 +59,7 @@ class Strategy(object):
                         self.cash -= buy_open_price*amount
                         self.cash -= commission
                         #update hold
-                        self.position_list[code] -= amount
+                        self.position_list[code] += amount
                         #add trade
                         self.trade = 0
 
