@@ -1,5 +1,6 @@
 #coding=utf-8
 import demo.dm_strategy
+import matplotlib.pyplot as plt
 import demo.dm_data
 import pandas as pd
 import tushare as ts
@@ -42,4 +43,12 @@ if __name__ == '__main__':
     obj = demo.dm_strategy.Strategy(code_list=['002415', '002416', '000333'], init_cash=100000, \
                                     start_time='2014-01-01', end_time='2018-06-01')
     obj.run_simulation()
+    df = pd.read_csv("./datares.csv")
+    df['benchmark'] = df['benchmark'] / df['benchmark'][0]
+    df['benchmark'].plot(legend='True')
+    df['capital_market_value'] = df['capital_market_value'] / df['capital_market_value'][0]
+    df['capital_market_value'].plot(legend='True')
+    plt.show()
+
+
 
