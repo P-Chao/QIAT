@@ -22,3 +22,7 @@ Quantitative investment analysis tools
 
 1. 开始项目
 2. 添加双均线策略
+
+#### 2022/04/30(v_0.02) ####
+
+1. 期权四个操作方向
